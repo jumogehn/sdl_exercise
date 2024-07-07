@@ -1,6 +1,7 @@
 
 NAME = 08
 
+#sudo apt install libsdl2-mixer-dev
 #sudo apt install libghc-sdl2-ttf-dev
 
 CXXFLAGS = $(shell pkg-config --cflags sdl2 SDL2_image SDL2_mixer SDL2_ttf)

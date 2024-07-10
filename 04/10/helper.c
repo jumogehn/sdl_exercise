@@ -13,7 +13,7 @@ void init(void)
 
 	//BEGIN ICON
 	SDL_Surface* icon;
-	icon_font = TTF_OpenFont("fontawesome-webfont.ttf", 50);
+	icon_font = TTF_OpenFont("res/fontawesome-webfont.ttf", 50);
 	SDL_Color font_color_icon = { 200,0,255,255 };
 	icon = TTF_RenderGlyph_Blended(icon_font, 0xf001, font_color_icon);
 	SDL_SetWindowIcon(Window, icon);

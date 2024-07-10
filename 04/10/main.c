@@ -258,10 +258,10 @@ SDL_bool PointInCircle(SDL_Point* point, SDL_Rect* square)
 
 void assets_in(void)
 {
-	Music = Mix_LoadMUS("Wish_You_Were_Here.mp3");
+	Music = Mix_LoadMUS("music/Wish_You_Were_Here.mp3");
 
 	//BEGIN BG
-	temp_surface = IMG_Load("bg.png");
+	temp_surface = IMG_Load("res/bg.png");
 	bg = SDL_CreateTextureFromSurface(Renderer, temp_surface);
 	SDL_QueryTexture(bg, NULL, NULL, &bg_dst.w, &bg_dst.h);
 	ww = bg_dst.w;
@@ -271,7 +271,7 @@ void assets_in(void)
 	//END 	BG
 
 	//BEGIN BUTTONS
-	temp_surface = IMG_Load("buttons.png");
+	temp_surface = IMG_Load("res/buttons.png");
 	buttons = SDL_CreateTextureFromSurface(Renderer, temp_surface);
 	init_rect(&src_rect_pause, 0, 0, 50, 50);
 	init_rect(&src_rect_halt, 60, 0, 50, 50);
@@ -282,7 +282,7 @@ void assets_in(void)
 	//END 	BUTTONS
 
 	//BEGIN BUTTON
-	temp_surface = IMG_Load("button.png");
+	temp_surface = IMG_Load("res/button.png");
 	button = SDL_CreateTextureFromSurface(Renderer, temp_surface);
 	SDL_QueryTexture(button, NULL, NULL, &button_dst.w, &button_dst.h);
 	button_dst.x = (120) - (button_dst.w / 2);
@@ -290,7 +290,7 @@ void assets_in(void)
 	//END 	BUTTON
 
 	//BEGIN SLOT
-	temp_surface = IMG_Load("slot.png");
+	temp_surface = IMG_Load("res/slot.png");
 	slot = SDL_CreateTextureFromSurface(Renderer, temp_surface);
 	SDL_QueryTexture(slot, NULL, NULL, &slot_dst.w, &slot_dst.h);
 	slot_dst.x = (120) - (slot_dst.w / 2);
@@ -298,7 +298,7 @@ void assets_in(void)
 	//END 	SLOT
 
 	//BEGIN FILLBAR
-	temp_surface = IMG_Load("fillbar.png");
+	temp_surface = IMG_Load("res/fillbar.png");
 	fillbar = SDL_CreateTextureFromSurface(Renderer, temp_surface);
 	SDL_QueryTexture(fillbar, NULL, NULL, &fillbar_dst.w, &fillbar_dst.h);
 	fillbar_dst.x = slot_dst.x + 2;
@@ -307,7 +307,7 @@ void assets_in(void)
 	//END 	FILLBAR
 
 	//BEGIN SHADOW TOP
-	temp_surface = IMG_Load("shadow_top.png");
+	temp_surface = IMG_Load("res/shadow_top.png");
 	shadow_top = SDL_CreateTextureFromSurface(Renderer, temp_surface);
 	SDL_QueryTexture(shadow_top, NULL, NULL, &shadow_top_dst.w, &shadow_top_dst.h);
 	shadow_top_dst.x = slot_dst.x;
@@ -315,7 +315,7 @@ void assets_in(void)
 	//END 	SHADOW TOP
 
 	//BEGIN SHADOW BOT
-	temp_surface = IMG_Load("shadow_bot.png");
+	temp_surface = IMG_Load("res/shadow_bot.png");
 	shadow_bot = SDL_CreateTextureFromSurface(Renderer, temp_surface);
 	SDL_QueryTexture(shadow_bot, NULL, NULL, &shadow_bot_dst.w, &shadow_bot_dst.h);
 	shadow_bot_dst.x = slot_dst.x;
@@ -330,7 +330,7 @@ void assets_in(void)
 	//END 	BOUNDS
 
 	//BEGIN TEXT
-	font = TTF_OpenFont("NimbusSanL-Regu.ttf", 16);
+	font = TTF_OpenFont("res/NimbusSanL-Regu.ttf", 16);
 	get_value();
 	render_value();
 	//END 	TEXT
